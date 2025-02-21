@@ -1,0 +1,86 @@
+.input {
+    @include input-text;
+
+    padding: 16px 24px;
+    border-radius: 8px;
+    background: $colorWhite;
+
+    &::placeholder {
+        opacity: .5;
+    }
+
+    &_gray {
+        background: $colorGray;
+
+        &::placeholder {
+            opacity: .6;
+        }
+    }
+}
+
+.confirm-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+
+    @include label-text;
+    font-weight: 500;
+
+
+    [type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        border: 1px solid $colorWhite;
+        margin-top: -2px;
+
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: url(../img/input/checkbox-check.svg) center center / contain no-repeat;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        &:checked {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    p {
+        color: $colorWhite60;
+        a {
+            color: $colorWhite;
+            text-decoration: underline;
+        }
+    }
+
+    &_gray {
+        [type="checkbox"] {
+            
+            border: 1px solid $colorBorder;
+            
+            position: relative;
+            &::after {
+                filter: grayscale(100%) brightness(0%);
+            }
+        }
+
+        p {
+            color: $colorBlack60;
+            a {
+                color: $colorBlack;
+            }
+        }
+    }
+}

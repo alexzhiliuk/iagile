@@ -1,0 +1,82 @@
+.banner {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    padding: $padding40;
+    padding-top: clamp(100px, 20vw, 200px);
+    border-radius: 16px;
+    overflow: hidden;
+
+    position: relative;
+    & > * {
+        z-index: 1;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $colorBlack70;
+        z-index: 0;
+    }
+
+    // .banner__title
+    &__title {
+        @include h1;
+        color: $colorWhite;
+        text-align: center;
+        
+        &:first-child {
+            margin-top: auto;
+        }
+    }
+
+    // .banner__items
+    &__items {
+        width: 100%;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: 2;
+            width: clamp(50px, 8vw, 80px);
+            aspect-ratio: 1;
+            background: url(../img/banner/Plus.svg) center center / contain no-repeat;
+        }
+    }
+
+    // .banner__item
+    &__item {
+        @include h3;
+        color: $colorWhite;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:first-child {
+            background: url(../img/case/figrure.png) 20% 70% / 140% auto no-repeat;
+            background-color: $colorPrimary500;
+        }
+        &:last-child {
+            background: url(../img/case/figrure.png) 40% 40% / 140% auto no-repeat;
+            background-color: $colorPrimary500;
+        }
+        
+
+        padding: 16px;
+        border-radius: 8px;
+        height: 140px;
+    }
+}

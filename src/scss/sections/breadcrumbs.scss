@@ -1,0 +1,39 @@
+.breadcrumbs {
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &_gray {
+        background: $colorBgGray;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    // .breadcrumbs__item
+    &__item {
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @include text-5;
+
+        &::after {
+            content: "/";
+        }
+
+        // .breadcrumbs__item_last
+        &_last {
+            color: $colorTextGray;
+            opacity: .6;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

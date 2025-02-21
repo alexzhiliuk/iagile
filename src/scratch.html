@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Профессия с нуля"
+    })
+    <body>
+
+
+        @@include("html/header.html", {"classes": "header_gray header_underline"})
+        @@include("html/popups/form-popup.html")
+        @@include("html/scratch/breadcrumbs.html")
+
+        <main>            
+            @@include("html/scratch/hero.html")
+            @@include("html/scratch/help-us.html")
+            @@include("html/scratch/process.html")
+            @@include("html/scratch/metrics.html")
+            @@include("html/scratch/automation.html")
+            @@include("html/scratch/banner.html")
+            @@include("html/scratch/cta-form.html")
+        </main>
+
+        @@include("html/footer.html")
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

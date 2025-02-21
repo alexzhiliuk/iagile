@@ -1,0 +1,187 @@
+.case {
+
+    border-radius: 16px;
+    background-color: $colorWhite;
+    padding: $padding40;
+
+    display: flex;
+    gap: 24px;
+
+    @media screen and (max-width: $breakpoint992) {
+        flex-direction: column;
+    }
+
+    // .case__col
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &:first-of-type {
+            flex: 0 0 380px;
+            @media screen and (max-width: $breakpoint992) {
+                flex: unset;
+            }
+        }
+
+        &:last-of-type {
+            gap: 8px;
+        }
+
+        .card {
+            &__content {
+                padding: 28px;
+                gap: 20px;
+            }
+            &__title {
+                @include h5;
+            }
+            &__ul,
+            &__ol {
+                @include text-4;
+
+                li {
+                    &::before {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+            &__ul {
+                li {
+                    &::before {
+                        translate: 0 -1px;
+                    }
+                }
+            }
+        }
+    }
+
+    // .case__header
+    &__header {
+    }
+
+    // .case__logo
+    &__logo {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $colorBorder;
+
+        img {
+            width: 100%;
+            max-width: 185px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    // .case__text
+    &__text {
+        margin-top: $padding40;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    // .case__title
+    &__title {
+        font-weight: 700;
+        font-size: clamp(24px, 3.2vw, 32px);
+        letter-spacing: -0.8px;
+    }
+
+    // .case__subtitle
+    &__subtitle {
+        @include text-3;
+        color: $colorBlack40;
+    }
+
+    // .case__informations
+    &__informations {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media screen and (max-width: $breakpoint992) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    }
+
+    // .case__process
+    &__process {
+        border: 1px solid $colorPrimary500;
+        background: $colorWhite;
+    }
+    
+    // .case__row
+    &__row {
+        @media screen and (max-width: $breakpoint1200) {
+            & > * {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    // .case__result
+    &__result {
+        background: url(../img/case/figrure.png) 40% 40% / 150% auto no-repeat;
+
+        @media screen and (max-width: $breakpoint1200) {
+            .card__ul_row {
+                flex-direction: column;
+
+                li {
+                    flex: unset;
+                }
+            }
+        }
+    }
+}
+
+.case-information {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    // .case-information__avatar
+    &__avatar {
+        background-color: $colorBgGray;
+        border-radius: 50%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 46px;
+        height: 46px;
+        flex-shrink: 0;
+
+        img {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+    }
+
+    // .case-information__text
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    // .case-information__title
+    &__title {
+        @include h5;
+    }
+
+    // .case-information__subtitle
+    &__subtitle {
+        @include text-1;
+        color: $colorBlack80;
+    }
+}

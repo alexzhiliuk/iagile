@@ -1,0 +1,131 @@
+.cta {
+
+    &_form {
+        padding: $padding40;
+        border-radius: 16px;
+
+        background-image: url('../../img/cta/figure.png');
+        background-size: 150% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: $colorPrimary400;
+
+        @media screen and (max-width: $breakpoint576) {
+            gap: 16px;
+        }
+    }
+
+    &_with-form {
+        .cta__img {
+            min-height: clamp(250px, 54vw, 540px);
+        }
+
+        .cta-form {
+            align-self: stretch;
+        }
+    }
+
+    // .cta__col
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    // .cta__img
+    &__img {
+        border-radius: 16px;
+        min-height: clamp(200px, 40vw, 400px);
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $colorBlack40;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 0;
+        }
+    }
+
+    // .cta__banner
+    &__banner {
+        background-color: $colorPrimary400;
+        border-radius: 16px;
+        padding: $padding40;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        background-image: url('../../img/cta/figure.png');
+        background-size: 280% auto;
+        background-repeat: no-repeat;
+        background-position: 20% center;
+
+        &_solid {
+            background: $colorBlack;
+        }
+
+        & > * {
+            &:last-child {
+                margin-top: auto;
+            }
+        }
+    }
+
+    // .cta__title
+    &__title {
+        @include banner-title-1;
+        color: $colorWhite;
+    }
+
+    // .cta__text
+    &__text {
+        @include text-1;
+        color: $colorGray;
+    }
+
+    // .cta__btn
+    &__btn {
+        margin-top: auto;
+
+        @media screen and (max-width: $breakpoint576) {
+            margin-top: 20px;
+            align-self: stretch;
+        }
+    }
+}
+
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .confirm-checkbox {
+            padding-top: 8px;
+        }
+    }
+
+    .btn {
+        @media screen and (min-width: $breakpoint576) {
+            align-self: flex-start;
+        }
+        
+    }
+}

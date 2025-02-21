@@ -1,0 +1,89 @@
+.metrics {
+
+    background: url(../../img/metrics/figure.png) 50% 50% / 140% auto no-repeat;
+    background-color: $colorPrimary500;
+    border-radius: 16px;
+    padding: $padding40;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint576) {
+        background-size: auto 140%;
+    }
+
+    &_column {
+        background: none;
+        @include flexColumns(2, 8px);
+        flex-direction: row;
+        align-items: stretch;
+        padding: 0;
+
+        @media screen and (max-width: $breakpoint992) {
+            & > * {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    &__col {
+        
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding: $padding40;
+            border-radius: 16px;
+
+            background-color: $colorPrimary400;
+            background-image: url('../../img/cta/figure.png');
+            background-size: 230% auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            @media screen and (max-width: $breakpoint992) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+            }
+
+            .metrics__title {
+                text-align: left;
+            }
+        }
+    }
+
+    // .metrics__star
+    &__star {
+        width: clamp(40px, 5.8vw, 58px);
+        flex-shrink: 0;
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+
+    // .metrics__title
+    &__title {
+        text-align: center;
+        color: $colorWhite;
+        @include h1;
+    }
+
+    // .metrics__subtitle
+    &__subtitle {
+        margin-top: 12px;
+        text-align: center;
+        color: $colorWhite80;
+        @include text-3;
+    }
+
+    // .metrics__body
+    &__body {
+        margin-top: $padding40;
+    }
+}

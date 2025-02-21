@@ -1,0 +1,48 @@
+.arrows {
+    background-color: $colorBgGray;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+
+    &_invert {
+        background-color: $colorWhite;
+
+        .arrow {
+            background: $colorBgGray;
+        }
+    }
+}
+
+.arrow {
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    flex-grow: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: $colorWhite;
+
+    svg {
+        path {
+            fill: $colorBlack;
+        }
+    }
+
+    &:hover {
+        background: $colorPrimary500;
+
+        svg {
+            path {
+                fill: $colorWhite;
+            }
+        }
+    }
+}

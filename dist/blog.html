@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+     
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250221171608" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20250221171608">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250221171608"
+    />
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250221171608"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250221171608"></script>
+
+    <title>Блог</title>
+</head>
+    <body>
+
+
+        <header class="header header_gray header_underline">
+    <div class="header__container container">
+        <a href="index.html" class="header__logo">
+            <img src="img/header/logo.svg" alt="">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__droplist">
+                    <a href="services.html">Услуги</a>
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.91392 3.63047C8.89028 3.57336 8.85023 3.52455 8.79885 3.4902C8.74747 3.45585 8.68705 3.43751 8.62525 3.4375H2.37525C2.3134 3.43745 2.25294 3.45575 2.2015 3.49009C2.15007 3.52442 2.10997 3.57325 2.0863 3.63038C2.06263 3.68751 2.05644 3.75038 2.06852 3.81103C2.0806 3.87168 2.1104 3.92739 2.15415 3.97109L5.27915 7.09609C5.30818 7.12515 5.34264 7.1482 5.38058 7.16393C5.41851 7.17965 5.45918 7.18775 5.50025 7.18775C5.54131 7.18775 5.58198 7.17965 5.61992 7.16393C5.65785 7.1482 5.69232 7.12515 5.72134 7.09609L8.84634 3.97109C8.89003 3.92737 8.91977 3.87166 8.9318 3.81103C8.94383 3.7504 8.9376 3.68756 8.91392 3.63047Z" fill="#282B37"/>
+                    </svg>
+                    <ul>
+                        <li>
+                            <a href="business-automation.html">Автоматизация бизнеса</a>
+                        </li>
+                        <li>
+                            <a href="digital-transformation.html">Цифровая трансформация</a>
+                        </li>
+                        <li>
+                            <a href="agile-transformation.html">Agile-трансформация</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="" class="header__btn btn btn_s btn_outline">Обучение</a>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+        <section class="popup" data-popup="1" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="img/popup/close.svg" alt="">
+        </div>
+        <h2 class="popup__title">Оставьте заявку</h2>
+        <p class="popup__subtitle">Наши менеджеры свяжутся с вами ближайшее время</p>
+        <div class="popup__inputs">
+            <input class="input input_gray" type="text" placeholder="Ваше имя" required>
+            <input class="input input_gray" type="tel" placeholder="+7 (999) 999 99 99" data-tel-input required>
+            <input class="input input_gray" type="email" placeholder="E-mail" required>
+            <label class="confirm-checkbox confirm-checkbox_gray">
+                <input type="checkbox">
+                <p>
+                    Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                </p>
+            </label>
+        </div>
+        <button type="submit" class="btn popup__btn">Отправить</button>
+    </form>
+</section>
+        <div class="breadcrumbs breadcrumbs_gray">
+    <div class="breadcrumbs__container container">
+        <a href="index.html" class="breadcrumbs__item">Главная</a>
+        <div href="" class="breadcrumbs__item breadcrumbs__item_last">Блог</div>
+    </div>
+</div>
+
+        <main>            
+            <section class="hero hero_columns hero_colored hero_pt_40">
+    <div class="hero__container container">
+        <h1 class="hero__title">Блог</h1>
+    </div>
+</section>
+            <div class="section">
+    <div class="section__container container">
+        <div class="section__body three-columns-grid">
+            
+            <a href="article.html" class="card card_post">
+                <div class="card__image">
+                    <img src="img/blog/Blog Image.png" alt="">
+                    <div class="card__tag">
+                        <span>Управление персоналом</span>
+                    </div>
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Как улучшить работу команды</h3>
+                    <p class="card__text">Секреты повышения инициативности и ответственности сотрудников...</p>
+                    <div class="card__footer">
+                        <div class="card__date">9 декабря, 2024</div>
+                        <div class="card__link">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5306 8.5306L6.5306 13.5306C6.3897 13.6715 6.19861 13.7506 5.99935 13.7506C5.80009 13.7506 5.60899 13.6715 5.4681 13.5306C5.3272 13.3897 5.24805 13.1986 5.24805 12.9993C5.24805 12.8001 5.3272 12.609 5.4681 12.4681L9.93747 7.99997L5.46935 3.5306C5.39958 3.46083 5.34424 3.37801 5.30649 3.28686C5.26873 3.19571 5.2493 3.09801 5.2493 2.99935C5.2493 2.90069 5.26873 2.80299 5.30649 2.71184C5.34424 2.62069 5.39958 2.53786 5.46935 2.4681C5.53911 2.39833 5.62194 2.34299 5.71309 2.30524C5.80424 2.26748 5.90194 2.24805 6.0006 2.24805C6.09926 2.24805 6.19696 2.26748 6.28811 2.30524C6.37926 2.34299 6.46208 2.39833 6.53185 2.4681L11.5318 7.4681C11.6017 7.53786 11.6571 7.62072 11.6948 7.71193C11.7326 7.80313 11.7519 7.9009 11.7518 7.99961C11.7517 8.09832 11.7321 8.19603 11.6941 8.28715C11.6562 8.37827 11.6006 8.461 11.5306 8.5306Z" fill="#7B6BF2"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="article.html" class="card card_post">
+                <div class="card__image">
+                    <img src="img/blog/Blog Image-1.png" alt="">
+                    <div class="card__tag">
+                        <span>Бизнес-оптимизация</span>
+                    </div>
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Оцифровка процессов: зачем и как</h3>
+                    <p class="card__text">Прозрачность бизнеса через четкие зоны ответственности и измеримые результат...</p>
+                    <div class="card__footer">
+                        <div class="card__date">7 декабря, 2024</div>
+                        <div class="card__link">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5306 8.5306L6.5306 13.5306C6.3897 13.6715 6.19861 13.7506 5.99935 13.7506C5.80009 13.7506 5.60899 13.6715 5.4681 13.5306C5.3272 13.3897 5.24805 13.1986 5.24805 12.9993C5.24805 12.8001 5.3272 12.609 5.4681 12.4681L9.93747 7.99997L5.46935 3.5306C5.39958 3.46083 5.34424 3.37801 5.30649 3.28686C5.26873 3.19571 5.2493 3.09801 5.2493 2.99935C5.2493 2.90069 5.26873 2.80299 5.30649 2.71184C5.34424 2.62069 5.39958 2.53786 5.46935 2.4681C5.53911 2.39833 5.62194 2.34299 5.71309 2.30524C5.80424 2.26748 5.90194 2.24805 6.0006 2.24805C6.09926 2.24805 6.19696 2.26748 6.28811 2.30524C6.37926 2.34299 6.46208 2.39833 6.53185 2.4681L11.5318 7.4681C11.6017 7.53786 11.6571 7.62072 11.6948 7.71193C11.7326 7.80313 11.7519 7.9009 11.7518 7.99961C11.7517 8.09832 11.7321 8.19603 11.6941 8.28715C11.6562 8.37827 11.6006 8.461 11.5306 8.5306Z" fill="#7B6BF2"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="article.html" class="card card_post">
+                <div class="card__image">
+                    <img src="img/blog/Blog Image-2.png" alt="">
+                    <div class="card__tag">
+                        <span>Бизнес-оптимизация</span>
+                    </div>
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Agile для увеличения продаж</h3>
+                    <p class="card__text">Инструменты гибких методологий для оптимизации процесса продаж...</p>
+                    <div class="card__footer">
+                        <div class="card__date">2 декабря, 2024</div>
+                        <div class="card__link">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5306 8.5306L6.5306 13.5306C6.3897 13.6715 6.19861 13.7506 5.99935 13.7506C5.80009 13.7506 5.60899 13.6715 5.4681 13.5306C5.3272 13.3897 5.24805 13.1986 5.24805 12.9993C5.24805 12.8001 5.3272 12.609 5.4681 12.4681L9.93747 7.99997L5.46935 3.5306C5.39958 3.46083 5.34424 3.37801 5.30649 3.28686C5.26873 3.19571 5.2493 3.09801 5.2493 2.99935C5.2493 2.90069 5.26873 2.80299 5.30649 2.71184C5.34424 2.62069 5.39958 2.53786 5.46935 2.4681C5.53911 2.39833 5.62194 2.34299 5.71309 2.30524C5.80424 2.26748 5.90194 2.24805 6.0006 2.24805C6.09926 2.24805 6.19696 2.26748 6.28811 2.30524C6.37926 2.34299 6.46208 2.39833 6.53185 2.4681L11.5318 7.4681C11.6017 7.53786 11.6571 7.62072 11.6948 7.71193C11.7326 7.80313 11.7519 7.9009 11.7518 7.99961C11.7517 8.09832 11.7321 8.19603 11.6941 8.28715C11.6562 8.37827 11.6006 8.461 11.5306 8.5306Z" fill="#7B6BF2"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="article.html" class="card card_post">
+                <div class="card__image">
+                    <img src="img/blog/Blog Image-3.png" alt="">
+                    <div class="card__tag">
+                        <span>Стратегическое развитие</span>
+                    </div>
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">SAFe для роста компании</h3>
+                    <p class="card__text">Как масштабировать бизнес с помощью правильного подхода...</p>
+                    <div class="card__footer">
+                        <div class="card__date">1 декабря, 2024</div>
+                        <div class="card__link">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5306 8.5306L6.5306 13.5306C6.3897 13.6715 6.19861 13.7506 5.99935 13.7506C5.80009 13.7506 5.60899 13.6715 5.4681 13.5306C5.3272 13.3897 5.24805 13.1986 5.24805 12.9993C5.24805 12.8001 5.3272 12.609 5.4681 12.4681L9.93747 7.99997L5.46935 3.5306C5.39958 3.46083 5.34424 3.37801 5.30649 3.28686C5.26873 3.19571 5.2493 3.09801 5.2493 2.99935C5.2493 2.90069 5.26873 2.80299 5.30649 2.71184C5.34424 2.62069 5.39958 2.53786 5.46935 2.4681C5.53911 2.39833 5.62194 2.34299 5.71309 2.30524C5.80424 2.26748 5.90194 2.24805 6.0006 2.24805C6.09926 2.24805 6.19696 2.26748 6.28811 2.30524C6.37926 2.34299 6.46208 2.39833 6.53185 2.4681L11.5318 7.4681C11.6017 7.53786 11.6571 7.62072 11.6948 7.71193C11.7326 7.80313 11.7519 7.9009 11.7518 7.99961C11.7517 8.09832 11.7321 8.19603 11.6941 8.28715C11.6562 8.37827 11.6006 8.461 11.5306 8.5306Z" fill="#7B6BF2"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            
+        </div>
+    </div>
+</div>
+        </main>
+
+        <footer class="footer">
+    <div class="footer__container container two-columns">
+        
+        <div class="footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Напишите нам</div>
+                <a href="mailto:hello@iagile.co" class="footer-menu__email">hello@iagile.co</a>
+            </div>
+        </div>
+        
+        <div class="two-columns footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Навигация</div>
+                <ul class="footer-menu__list">
+                    <li>
+                        <a href="">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="">Календарь тренингов</a>
+                    </li>
+                    <li>
+                        <a href="">О нас</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title">Мы в соц сетях</div>
+                <div class="socials">
+                    <a href=""><img src="img/socials/Instagram.png" alt=""></a>
+                    <a href=""><img src="img/socials/LinkedIN_white.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/app.min.js?_v=20250221171608"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+.process {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 8px;
+
+    @media screen and (max-width: $breakpoint1200) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $breakpoint576) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .card {
+        &__title {
+            @include h5;
+
+            @media screen and (max-width: $breakpoint576) {
+                max-width: 90%;
+            }
+        }
+
+        &__icon {
+            width: 180px;
+
+            img {
+                width: 100%;
+                position: relative;
+                z-index: 0;
+                translate: 25% 30%;
+            }
+        }
+
+        &:hover {
+            .card__icon {
+                img {
+                    scale: 0.77;
+                    translate: 20% 20%;
+                }
+            }
+        }
+
+        @media screen and (max-width: $breakpoint576) {
+            min-height: 140px;
+        }
+    }
+}
+
+.process-banner {
+
+    grid-column: span 3;
+    padding: $padding40;
+    background: url(../img/metrics/figure.png) 50% 20% / 115% auto no-repeat;
+    background-color: $colorPrimary500;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &_dark {
+        background-color: $colorBlack;
+        background-image: url(../img/metrics/figure-white.png);
+    }
+
+    @media screen and (max-width: $breakpoint1200) {
+        grid-column: span 1;
+        gap: 16px;
+    }
+
+    // .process-banner__title
+    &__title {
+        color: $colorWhite;
+        font-size: clamp(22px, 2.8vw, 28px);
+        letter-spacing: -0.8px;
+        font-weight: 600;
+        max-width: 588px;
+
+    }
+
+    // .process-banner__btn
+    &__btn {
+        align-self: flex-end;
+
+        @media screen and (max-width: $breakpoint1200) {
+            align-self: stretch;
+        }
+    }
+}

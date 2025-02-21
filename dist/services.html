@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+     
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250221171608" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20250221171608">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250221171608"
+    />
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250221171608"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250221171608"></script>
+
+    <title>Услуги</title>
+</head>
+    <body>
+
+
+        <header class="header header_gray header_underline">
+    <div class="header__container container">
+        <a href="index.html" class="header__logo">
+            <img src="img/header/logo.svg" alt="">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__droplist">
+                    <a href="services.html">Услуги</a>
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.91392 3.63047C8.89028 3.57336 8.85023 3.52455 8.79885 3.4902C8.74747 3.45585 8.68705 3.43751 8.62525 3.4375H2.37525C2.3134 3.43745 2.25294 3.45575 2.2015 3.49009C2.15007 3.52442 2.10997 3.57325 2.0863 3.63038C2.06263 3.68751 2.05644 3.75038 2.06852 3.81103C2.0806 3.87168 2.1104 3.92739 2.15415 3.97109L5.27915 7.09609C5.30818 7.12515 5.34264 7.1482 5.38058 7.16393C5.41851 7.17965 5.45918 7.18775 5.50025 7.18775C5.54131 7.18775 5.58198 7.17965 5.61992 7.16393C5.65785 7.1482 5.69232 7.12515 5.72134 7.09609L8.84634 3.97109C8.89003 3.92737 8.91977 3.87166 8.9318 3.81103C8.94383 3.7504 8.9376 3.68756 8.91392 3.63047Z" fill="#282B37"/>
+                    </svg>
+                    <ul>
+                        <li>
+                            <a href="business-automation.html">Автоматизация бизнеса</a>
+                        </li>
+                        <li>
+                            <a href="digital-transformation.html">Цифровая трансформация</a>
+                        </li>
+                        <li>
+                            <a href="agile-transformation.html">Agile-трансформация</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="" class="header__btn btn btn_s btn_outline">Обучение</a>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+        <section class="popup" data-popup="1" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="img/popup/close.svg" alt="">
+        </div>
+        <h2 class="popup__title">Оставьте заявку</h2>
+        <p class="popup__subtitle">Наши менеджеры свяжутся с вами ближайшее время</p>
+        <div class="popup__inputs">
+            <input class="input input_gray" type="text" placeholder="Ваше имя" required>
+            <input class="input input_gray" type="tel" placeholder="+7 (999) 999 99 99" data-tel-input required>
+            <input class="input input_gray" type="email" placeholder="E-mail" required>
+            <label class="confirm-checkbox confirm-checkbox_gray">
+                <input type="checkbox">
+                <p>
+                    Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                </p>
+            </label>
+        </div>
+        <button type="submit" class="btn popup__btn">Отправить</button>
+    </form>
+</section>
+        <div class="breadcrumbs breadcrumbs_gray">
+    <div class="breadcrumbs__container container">
+        <a href="index.html" class="breadcrumbs__item">Главная</a>
+        <div href="" class="breadcrumbs__item breadcrumbs__item_last">Услуги</div>
+    </div>
+</div>
+
+        <main>            
+            <section class="hero hero_columns hero_colored hero_pt_40">
+    <div class="hero__container container">
+        <h1 class="hero__title">Услуги</h1>
+    </div>
+</section>
+            <div class="section">
+    <div class="section__container container">
+        <div class="section__body three-columns-grid">
+            <a href="business-automation.html" class="service">
+                <img src="img/services/Image.png" alt="" class="service__img">
+                <span class="service__title">Автоматизация бизнеса</span>
+            </a>
+            <a href="digital-transformation.html" class="service">
+                <img src="img/services/Image-1.png" alt="" class="service__img">
+                <span class="service__title">Цифровая трансформация</span>
+            </a>
+            <a href="agile-transformation.html" class="service">
+                <img src="img/services/Image-2.png" alt="" class="service__img">
+                <span class="service__title">Agile-трансформация</span>
+            </a>
+            <a href="" class="service">
+                <img src="img/services/Image-3.png" alt="" class="service__img">
+                <span class="service__title">Agile и Бизнес Аудит</span>
+            </a>
+            <a href="safe.html" class="service">
+                <img src="img/services/Image-4.png" alt="" class="service__img">
+                <span class="service__title">SAFe-масштабирование</span>
+            </a>
+            <a href="own-agile.html" class="service">
+                <img src="img/services/Image-5.png" alt="" class="service__img">
+                <span class="service__title">Создание индивидуальной <br>Agile методологии </span>
+            </a>
+            <a href="increased-sales.html" class="service">
+                <img src="img/services/Image-6.png" alt="" class="service__img">
+                <span class="service__title">Увеличение продаж <br>через Agile</span>
+            </a>
+            <a href="facilitating.html" class="service">
+                <img src="img/services/Image-7.png" alt="" class="service__img">
+                <span class="service__title">Стратегические сессии. Целеполагание (OKR)</span>
+            </a>
+            <a href="" class="service">
+                <img src="img/services/Image-8.png" alt="" class="service__img">
+                <span class="service__title">Управление метриками <br>и ключевыми результатами (KPI)</span>
+            </a>
+        </div>
+    </div>
+</div>
+            <div class="section">
+    <div class="section__container container">
+        <h2 class="section__title">Наша <span>команда</span></h2>
+        <div class="section__body three-columns-grid">
+            
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-1.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Екатерина Соколова</h3>
+                    <p class="card__text card__text_fixed">Основатель iAgile, эксперт в Agile-фреймворках</p>
+                    <div class="card__footer">
+                        <p class="card__text">Вдохновитель и лидер нашей компании. Эксперт с многолетним опытом в применении Agile-фреймворков для бизнес-трансформаций.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-2.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Алексей Романов</h3>
+                    <p class="card__text card__text_fixed">Директор по бизнес-трансформациям</p>
+                    <div class="card__footer">
+                        <p class="card__text">Более 10 лет опыта в стратегическом планировании и запуске продуктов с нуля. Руководит проектами, направленными на улучшение бизнес-процессов клиентов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-3.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Мария Ковалёва</h3>
+                    <p class="card__text card__text_fixed">Аgile-коуч и тренер</p>
+                    <div class="card__footer">
+                        <p class="card__text">Свыше 300 проведенных тренингов для стартапов и компаний среднего бизнеса. Эксперт в Scrum, Kanban и создании минимально жизнеспособных продуктов (MVP).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-4.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Игорь Смирнов</h3>
+                    <p class="card__text card__text_fixed">Специалист по организационному развитию</p>
+                    <div class="card__footer">
+                        <p class="card__text">Эксперт в оптимизации организационных структур и повышении эффективности взаимодействия между подразделениями.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-5.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Анна Ветрова</h3>
+                    <p class="card__text card__text_fixed">Тренер по OKR и стратегическим сессиям</p>
+                    <div class="card__footer">
+                        <p class="card__text">Помогает формировать четкие приоритеты и ключевые показатели успеха для клиентов. Имеет 7-летний опыт в работе с компаниями разных масштабов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/team/Image-6.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Владислав Карпов</h3>
+                    <p class="card__text card__text_fixed">Аналитик рынков и продуктов</p>
+                    <div class="card__footer">
+                        <p class="card__text">Профессионал в анализе конкурентных преимуществ и клиентских требований. Содействует созданию успешных продуктов, востребованных рынком.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </main>
+
+        <footer class="footer">
+    <div class="footer__container container two-columns">
+        
+        <div class="footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Напишите нам</div>
+                <a href="mailto:hello@iagile.co" class="footer-menu__email">hello@iagile.co</a>
+            </div>
+        </div>
+        
+        <div class="two-columns footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Навигация</div>
+                <ul class="footer-menu__list">
+                    <li>
+                        <a href="">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="">Календарь тренингов</a>
+                    </li>
+                    <li>
+                        <a href="">О нас</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title">Мы в соц сетях</div>
+                <div class="socials">
+                    <a href=""><img src="img/socials/Instagram.png" alt=""></a>
+                    <a href=""><img src="img/socials/LinkedIN_white.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/app.min.js?_v=20250221171608"></script>
+    </body>
+</html>

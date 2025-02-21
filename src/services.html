@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Услуги"
+    })
+    <body>
+
+
+        @@include("html/header.html", {"classes": "header_gray header_underline"})
+        @@include("html/popups/form-popup.html")
+        @@include("html/services/breadcrumbs.html")
+
+        <main>            
+            @@include("html/services/hero.html")
+            @@include("html/services/services.html")
+            @@include("html/services/team.html")
+        </main>
+
+        @@include("html/footer.html")
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+.clients {
+
+    // .clients__title
+    &__title {
+        @include h3;
+        text-align: center;
+    }
+
+    // .clients__body
+    &__body {
+        margin-top: 32px;
+        display: flex;
+        gap: 8px;
+
+        overflow-x: auto;
+
+    }
+
+    &__item {
+        height: 120px;
+        flex: 0 0 210px;
+        border-radius: 16px;
+        border: 1px solid $colorBorder;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        user-select: none;
+
+        img {
+            max-height: 90%;
+            max-width: 90%;
+            display: block;
+        }
+    }
+
+}

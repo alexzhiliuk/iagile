@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Блог"
+    })
+    <body>
+
+
+        @@include("html/header.html", {"classes": "header_gray header_underline"})
+        @@include("html/popups/form-popup.html")
+        @@include("html/blog/breadcrumbs.html")
+
+        <main>            
+            @@include("html/blog/hero.html")
+            @@include("html/blog/posts.html")
+        </main>
+
+        @@include("html/footer.html")
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

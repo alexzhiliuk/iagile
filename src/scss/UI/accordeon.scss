@@ -1,0 +1,130 @@
+.accordeons {
+    & > * {
+        @media screen and (max-width: $breakpoint992) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.accordeon {
+
+    background-color: $colorBgGray;
+    padding: $padding40;
+    border-radius: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    max-height: max-content;
+
+    &_open {
+        grid-template-rows: auto 1fr;
+        .accordeon__header {
+            &::after {
+                opacity: 1;
+                rotate: 0deg;
+            }
+            padding-bottom: 32px;
+        }
+        .accordeon__body {
+            grid-template-rows: 1fr;
+            opacity: 1;
+        }
+    }
+
+    // .accordeon__header
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: url(../img/accordeon/arrow.svg) center center / contain no-repeat;
+            opacity: .4;
+            rotate: 180deg;
+        }
+    }
+
+    // .accordeon__title
+    &__title {
+        @include h4;
+        display: flex;
+        align-items: center;
+
+        height: 1lh;
+        @media screen and (max-width: $breakpoint992) {
+            height: unset;
+        }
+    }
+
+    // .accordeon__body
+    &__body {
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+    }
+
+    // .accordeon__wrapper
+    &__wrapper {
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+
+        @include text-3;
+
+        ol, ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5em;
+        }
+
+        ol {
+            counter-reset: ol-list;
+
+            li {
+                counter-increment: ol-list;
+                display: grid;
+                grid-template-columns: 2ch 1fr;
+    
+                &::before {
+                    content: counter(ol-list) ".";
+                }
+                
+            }
+        }
+
+        ul {
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;            
+    
+                &::before {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $colorBlack;
+                    
+                    position: relative;
+                    top: .5lh;
+                    translate: 0 -50%;
+                }
+                
+            }
+        }
+    }
+}

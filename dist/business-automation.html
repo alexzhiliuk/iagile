@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+     
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250221171608" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20250221171608">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250221171608"
+    />
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250221171608"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250221171608"></script>
+
+    <title>Автоматизация бизнеса</title>
+</head>
+    <body>
+
+
+        <header class="header header_gray header_underline">
+    <div class="header__container container">
+        <a href="index.html" class="header__logo">
+            <img src="img/header/logo.svg" alt="">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__droplist">
+                    <a href="services.html">Услуги</a>
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.91392 3.63047C8.89028 3.57336 8.85023 3.52455 8.79885 3.4902C8.74747 3.45585 8.68705 3.43751 8.62525 3.4375H2.37525C2.3134 3.43745 2.25294 3.45575 2.2015 3.49009C2.15007 3.52442 2.10997 3.57325 2.0863 3.63038C2.06263 3.68751 2.05644 3.75038 2.06852 3.81103C2.0806 3.87168 2.1104 3.92739 2.15415 3.97109L5.27915 7.09609C5.30818 7.12515 5.34264 7.1482 5.38058 7.16393C5.41851 7.17965 5.45918 7.18775 5.50025 7.18775C5.54131 7.18775 5.58198 7.17965 5.61992 7.16393C5.65785 7.1482 5.69232 7.12515 5.72134 7.09609L8.84634 3.97109C8.89003 3.92737 8.91977 3.87166 8.9318 3.81103C8.94383 3.7504 8.9376 3.68756 8.91392 3.63047Z" fill="#282B37"/>
+                    </svg>
+                    <ul>
+                        <li>
+                            <a href="business-automation.html">Автоматизация бизнеса</a>
+                        </li>
+                        <li>
+                            <a href="digital-transformation.html">Цифровая трансформация</a>
+                        </li>
+                        <li>
+                            <a href="agile-transformation.html">Agile-трансформация</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="" class="header__btn btn btn_s btn_outline">Обучение</a>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+        <section class="popup" data-popup="1" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="img/popup/close.svg" alt="">
+        </div>
+        <h2 class="popup__title">Оставьте заявку</h2>
+        <p class="popup__subtitle">Наши менеджеры свяжутся с вами ближайшее время</p>
+        <div class="popup__inputs">
+            <input class="input input_gray" type="text" placeholder="Ваше имя" required>
+            <input class="input input_gray" type="tel" placeholder="+7 (999) 999 99 99" data-tel-input required>
+            <input class="input input_gray" type="email" placeholder="E-mail" required>
+            <label class="confirm-checkbox confirm-checkbox_gray">
+                <input type="checkbox">
+                <p>
+                    Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                </p>
+            </label>
+        </div>
+        <button type="submit" class="btn popup__btn">Отправить</button>
+    </form>
+</section>
+        <section class="popup popup_video" data-popup="2" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="img/popup/close.svg" alt="">
+        </div>
+        <div class="popup__video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fW1bGwq_s6w?si=a3KDSlSXeIoTC80E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </form>
+</section>
+        <div class="breadcrumbs breadcrumbs_gray">
+    <div class="breadcrumbs__container container">
+        <a href="index.html" class="breadcrumbs__item">Главная</a>
+        <div href="" class="breadcrumbs__item breadcrumbs__item_last">Business Automation (Автоматизация бизнеса)</div>
+    </div>
+</div>
+
+        <main>            
+            <section class="hero hero_columns hero_colored">
+    <div class="hero__container container">
+        <div class="two-columns">
+            <div class="hero-content">
+                <h1 class="hero-content__title">Автоматизируйте свой бизнес и повысьте вашу <span>эффективность</span></h1>
+                <p class="hero-content__text">В результате оценки эффективности вашего бизнеса предложим автоматизировать те процессы, которые на дистанции дают прирост к эффективности и выручке</p>
+                <button class="hero-content__btn btn js-open-popup" data-popup="1">Заказать консультацию</button>
+            </div>
+            <div class="hero-image video js-open-popup" data-popup="2">
+                <img src="img/hero/automation-Image.png" alt="">
+            </div>
+        </div>
+        <div class="hero-advantages three-columns">
+            <div class="hero-advantages__item">
+                Автоматизируйте рутинные операции и высвободите время сотрудников
+            </div>
+            <div class="hero-advantages__item">
+                Улучшите качество принятия решений благодаря актуальным данным
+            </div>
+            <div class="hero-advantages__item">
+                Повысьте конкурентоспособность <br>
+                в быстро меняющейся среде
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="section">
+    <div class="section__container container">
+        <h2 class="section__title">Масштабируйте <br>свой бизнес с <span>iAgile</span></h2>
+        <div class="section__body two-columns-grid two-columns-grid_first_w_400">
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <ul class="card__ul">
+                        <div class="card__num card__num_sm card__num_outline">Проблемы</div>
+                        <li>Низкая эффективность</li>
+                        <li>Все данные вводятся вручную</li>
+                        <li>Постоянно повторяются операции</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <div class="card__num card__num_sm">Решение</div>
+                    <h4 class="card__title">Сформируем видение развития компании</h4>
+                    <p class="card__text">
+                        Найдем узкие места и точки роста, развития компании. Повысим эффективность компании уже  в первый месяц.
+                    </p>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <ul class="card__ul">
+                        <div class="card__num card__num_sm card__num_outline">Проблемы</div>
+                        <li>Вероятность человеческих ошибок</li>
+                        <li>Непоследовательные действия</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <div class="card__num card__num_sm">Решение</div>
+                    <h4 class="card__title">Повышение точности</h4>
+                    <p class="card__text">
+                        Cокращение трудозатрат и экономия средств. Это дает возможность увеличить объемы производства и продаж без роста штата.
+                    </p>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <ul class="card__ul">
+                        <div class="card__num card__num_sm card__num_outline">Проблемы</div>
+                        <li>Сотрудники тратят много времени на повторяющиеся задачи</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <div class="card__num card__num_sm">Решение</div>
+                    <h4 class="card__title">Рост производительности</h4>
+                    <p class="card__text">
+                        Автоматизация освобождает сотрудников от рутинных задач, позволяя им сосредоточиться на более сложной и стратегической работе, что повышает их продуктивность.
+                    </p>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <ul class="card__ul">
+                        <div class="card__num card__num_sm card__num_outline">Проблемы</div>
+                        <li>Отсутствие метрик</li>
+                        <li>Сложно управлять бизнесом без цифр, как следствие большой риск, что важные решения принимаются неправильно</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card_unhover">
+                <div class="card__content">
+                    <div class="card__num card__num_sm">Решение</div>
+                    <h4 class="card__title">Эффективные бизнес решения</h4>
+                    <ol>
+                        <li>Поможем определить и сфокусироваться на важных метриках и ключевых результатах вашего бизнеса.</li>
+                        <li>Подключим метрики, научим управлять KPI.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="section">
+    <div class="section__container container">
+        <h2 class="section__title">Поможем вам, если вы</h2>
+        <div class="section__body two-columns">
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/help-us/Image.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Средний и малый бизнес</h3>
+                    <p class="card__text">Повысим конкурентоспособность, освободим ресурсы и улучшим клиентский опыт без увеличения штата.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="img/help-us/Image-1.png" alt="">
+                </div>
+                <div class="card__content card__content_hover_pattern">
+                    <h3 class="card__title">Корпорация</h3>
+                    <p class="card__text">Повысим эффективность, масштабируемость и качество за счет оптимизации рутинных процессов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <div class="section">
+    <div class="section__container container">
+        <div class="quote">
+            <blockquote class="quote__text">
+                «Наша ключевая цель — помочь вашему бизнесу <br>
+                стать более эффективным, гибким и <mark>конкурентоспособным.</mark> <br>
+                Результат — прогнозируемость и готовность <br>
+                к вызовам завтрашнего дня»
+            </blockquote>
+        </div>
+    </div>
+</div>
+            <div class="section">
+    <div class="section__container container">
+        <div class="section__body cta cta_with-form two-columns">
+            <div class="cta__img">
+                <img src="img/cta/Image-2.png" alt="">
+            </div>
+            <div class="cta__banner cta__banner_solid">
+                <h2 class="cta__title">Оставьте заявку и получите полноценную консультацию <br>по точкам роста</h2>
+                <div class="cta-form">
+                    <div class="cta-form__fields">
+                        <input type="tel" class="input" placeholder="+7 (999) 999 99 99" data-tel-input >
+                        <label class="confirm-checkbox">
+                            <input type="checkbox">
+                            <p>
+                                Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                            </p>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="section">
+    <div class="section__container container">
+        <div class="section__body">
+            <div class="metrics">
+                <h2 class="metrics__title">Что дает цифровая транформация <br>вашему бизнесу?</h2>
+                <div class="metrics__body four-columns">
+                    <div class="card card_unhover">
+                        <div class="card__content card__content_white">
+                            <span class="card__metric">10-50%</span>
+                            <p class="card__text">Сотрудники более удовлетворены и вовлечены в рабочие процессы</p>
+                        </div>
+                    </div>
+                    <div class="card card_unhover">
+                        <div class="card__content card__content_white">
+                            <span class="card__metric">на 30-75%</span>
+                            <p class="card__text">Быстрее происходят  поставки товара или услуг на рынок</p>
+                        </div>
+                    </div>
+                    <div class="card card_unhover">
+                        <div class="card__content card__content_white">
+                            <span class="card__metric">20-50%</span>
+                            <p class="card__text">Возрастает продуктивность команды</p>
+                        </div>
+                    </div>
+                    <div class="card card_unhover">
+                        <div class="card__content card__content_white">
+                            <span class="card__metric">25-75%</span>
+                            <p class="card__text">Улучшается качество продукта или услуг</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <section class="section">
+    <div class="section__container container">
+        <h2 class="section__title">Автоматизация бизнеса <br><span>простыми словами</span></h2>
+        <div class="section__body slider">
+            <div class="slider__body swiper" id="automationSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card card_unhover">
+                            <div class="card__content">
+                                <div class="card__num card__num_aspect_1">1</div>
+                                <h3 class="card__title">Изучение текущего состояния бизнеса</h3>
+                                <p class="card__text">Мы тщательно проанализируем все, что у вас есть: технологии, оборудование, программы, данные, процессы и методы безопасности. Это позволит нам понять, где есть области, которые можно улучшить.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card_unhover">
+                            <div class="card__content">
+                                <div class="card__num card__num_aspect_1">2</div>
+                                <h3 class="card__title">Анализ новых технологических решений на рынке</h3>
+                                <p class="card__text">Мы подберем такие технологии, которые идеально подойдут именно для вашего бизнеса и позволят выделиться среди конкурентов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card_unhover">
+                            <div class="card__content">
+                                <div class="card__num card__num_aspect_1">3</div>
+                                <h3 class="card__title">Разработка подробного плана</h3>
+                                <p class="card__text">План цифровой трансформации будет включать в себя приоритеты, проекты и инициативы, необходимые для устранения проблем и достижения ваших бизнес-целей</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card_unhover">
+                            <div class="card__content">
+                                <div class="card__num card__num_aspect_1">4</div>
+                                <h3 class="card__title">Детальная проработка реализации</h3>
+                                <p class="card__text">Мы тщательно спланируем внедрение всех изменений в вашу компанию, чтобы процесс автоматизации прошел максимально плавно и эффективно</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__nav">
+                <div class="arrows">
+                    <button type="button" class="arrow" id="automationSliderPrev">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.22933 9.40958L12.5812 1.05773C13.036 0.602856 13.8128 0.810974 13.9793 1.43234C14.0565 1.72071 13.9741 2.02841 13.763 2.23952L6.00097 10.0005L13.763 17.7614C14.2178 18.2163 14.0097 18.993 13.3884 19.1595C13.1 19.2368 12.7923 19.1543 12.5812 18.9432L4.22933 10.5914C3.90273 10.2651 3.90273 9.73581 4.22933 9.40958Z" fill="#282B37"/>
+    </svg>           
+</button>
+                    <button type="button" class="arrow" id="automationSliderNext">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.7633 10.5909L8.41143 18.9428C7.95657 19.3976 7.17986 19.1895 7.01336 18.5682C6.9361 18.2798 7.01854 17.9721 7.22965 17.761L14.9916 10L7.22965 2.23906C6.77477 1.78419 6.98289 1.00749 7.60426 0.840994C7.89263 0.763724 8.20032 0.846165 8.41143 1.05727L16.7633 9.40912C17.0899 9.73536 17.0899 10.2647 16.7633 10.5909Z" fill="#282B37"/>
+    </svg>                
+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="section">
+    <div class="section__container container">
+        <div class="section__body">
+            <div class="clients">
+                <h2 class="clients__title">Наш опыт</h2>
+                <div class="clients__body draggable">
+                    <a href="" class="clients__item">
+                        <img src="img/clients/PayPal_Logo2014 1.png" alt="">
+                    </a>
+                    <a href="" class="clients__item">
+                        <img src="img/clients/logo-gradient-blue-jira 1.png" alt="">
+                    </a>
+                    <a href="" class="clients__item">
+                        <img src="img/clients/Microsoft_Office_Teams_(2018–present) 1.png" alt="">
+                    </a>
+                    <a href="" class="clients__item">
+                        <img src="img/clients/Zoom_Communications_Logo 1.png" alt="">
+                    </a>
+                    <a href="" class="clients__item">
+                        <img src="img/clients/Shopify_logo_2018 1.png" alt="">
+                    </a>
+                    <a href="" class="clients__item">
+                        <img src="img/clients/Skype_logo_(2019–present) 1.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <div class="section">
+    <div class="section__container container">
+        <div class="section__body">
+            <div class="banner" style="background-image: url('../img/banner/cover.png');">
+                <h2 class="banner__title">Прогнозируемый <br>и прибыльный бизнес</h2>
+                <div class="banner__items two-columns">
+                    <div class="banner__item">Автоматизация <br>бизнес-процессов</div>
+                    <div class="banner__item">Гибкие методы <br>управления Agile</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="section section_colored">
+    <div class="section__container container">
+        <div class="section__body cta cta_form two-columns">
+            <div class="cta__col">
+                <h2 class="cta__title">Оставьте заявку <br>
+                    и получите бесплатный <br> 
+                    аудит бизнес-процессов <br>
+                    вашей компании!</h2>
+                <p class="cta__text">Наши менеджеры свяжутся с вами ближайшее время</p>
+            </div>
+            <div class="cta__col">
+                <div class="cta-form">
+                    <div class="cta-form__fields">
+                        <input type="text" class="input" placeholder="Ваше Имя">
+                        <input type="tel" class="input" placeholder="+7 (999) 999 99 99" data-tel-input >
+                        <label class="confirm-checkbox">
+                            <input type="checkbox">
+                            <p>
+                                Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                            </p>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn_dark">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </main>
+
+        <footer class="footer">
+    <div class="footer__container container two-columns">
+        
+        <div class="footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Напишите нам</div>
+                <a href="mailto:hello@iagile.co" class="footer-menu__email">hello@iagile.co</a>
+            </div>
+        </div>
+        
+        <div class="two-columns footer__col">
+            <div class="footer-menu">
+                <div class="footer-menu__title">Навигация</div>
+                <ul class="footer-menu__list">
+                    <li>
+                        <a href="">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="">Календарь тренингов</a>
+                    </li>
+                    <li>
+                        <a href="">О нас</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title">Мы в соц сетях</div>
+                <div class="socials">
+                    <a href=""><img src="img/socials/Instagram.png" alt=""></a>
+                    <a href=""><img src="img/socials/LinkedIN_white.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/app.min.js?_v=20250221171608"></script>
+    </body>
+</html>

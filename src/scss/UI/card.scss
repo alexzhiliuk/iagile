@@ -1,0 +1,542 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1;
+
+    &_bg_img {
+        height: clamp(250px, 54vw, 540px);
+        padding: $padding40;
+        justify-content: flex-end;
+
+        .card__image {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            height: unset;
+            margin-bottom: 0;
+
+            &::before {
+                background: $colorBlack70;
+            }
+        } 
+
+        .card__content {
+            z-index: 2;
+            flex-grow: 0;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+
+            background: url(../img/cards/hover-figure-white.png) 80% 58% / 150% auto no-repeat;
+            background-color: $colorWhite;
+        }
+    }
+
+    &_post {
+        .card__text {
+            @include textOverflow(2);
+        }
+
+        .card__footer {
+            margin-top: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            color: $colorBlack;
+        }
+
+        .card__content > * {
+            &:nth-last-child(2) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    // .card__image
+    &__image {
+        border-radius: 16px;
+        height: clamp(200px, 30vw, 300px);
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $colorBlack40;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 0;
+        }
+        
+    }
+
+    // .card__tag
+    &__tag {
+        font-size: clamp(12px, 1.4vw, 14px);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            @include textOverflow(1);
+            color: $colorWhite;
+        }
+
+        padding: 10px 18px;
+        background-color: $colorPrimary500;
+        border-radius: 8px;
+
+        position: absolute;
+        z-index: 3;
+        left: 16px;
+        bottom: 16px;
+
+        max-width: calc(100% - 2 * 16px);
+    }
+
+    // .card__content
+    &__content {
+        
+        border-radius: 16px;
+        background-color: $colorBgGray;
+        padding: $padding40;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-grow: 1;
+
+        overflow: hidden;
+        position: relative;
+        & > * {
+            position: relative;
+            z-index: 3;
+        }
+
+        &_h_272 {
+            min-height: 272px;
+        }
+        &_hover_pattern {
+            &::before {
+                content: '';
+                display: block;
+                z-index: 0;
+                height: 412%;
+                aspect-ratio: 814 / 685;
+                background: url("../../img/cards/hover-figure.png") center center / contain no-repeat;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                translate: 10% -50%;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        &_hover_overlay {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 70%;
+                z-index: 4;
+                opacity: 0;
+                pointer-events: none;
+               
+                background: linear-gradient(180deg, rgba(123, 107, 242, 0) 19.9%, #7B6BF2 59.95%);
+            }
+        }
+        &_outline {
+            border: 1px solid $colorBorder;
+            background: $colorWhite;
+        }
+        &_white {
+            background: $colorWhite;
+
+            .card__icon {
+                &::before {
+                    background: linear-gradient(122.66deg, rgba(255, 255, 255, 0) -15.62%, #FFFFFF 100%);
+                }
+            }
+        }
+    }
+
+    // .card__header
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .card__title
+    &__title {
+        @include h3;
+    }
+
+    // .card__metric
+    &__metric {
+        @include metric-text;
+        white-space: nowrap;
+
+        &_transparent {
+            color: $colorBlack20;
+        }
+        &_mb_20 {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .card__text
+    &__text {
+        @include text-1;
+        color: $colorBlack80;
+
+        &_w_400 {
+            max-width: 400px;
+        }
+        &_fixed {
+            height: 2lh;
+
+            @media screen and (max-width: $breakpoint576) {
+                height: unset;
+            }
+        }
+    }
+
+    &__ul,
+    &__ol, 
+    ol, ul {
+        @include text-1;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &_row {
+            @include flexColumns(3, 8px);
+            flex-direction: row;
+        }
+    }
+
+    ol {
+        counter-reset: ol-list;
+
+        li {
+            counter-increment: ol-list;
+            color: $colorBlack80;
+            display: grid;
+            grid-template-columns: 2ch 1fr;
+
+            &::before {
+                content: counter(ol-list) ".";
+            }
+            
+        }
+
+        &.card__ol {
+            counter-reset: ol-list;
+            li {
+                counter-increment: ol-list;
+                color: $colorBlack80;
+
+                display: flex;
+                gap: 8px;
+
+                position: relative;
+                &::before {
+                    content: counter(ol-list);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    
+                    width: 28px;
+                    height: 28px;
+                    background: $colorPrimary500;
+                    color: $colorWhite;
+                    @include label-text;
+                }
+            }
+        }
+    }
+    ul {
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: $colorBlack80;
+            
+
+            &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $colorBlack80;
+                
+                position: relative;
+                top: .5lh;
+                translate: 0 -50%;
+            }
+            
+        }
+
+        &.card__ul {
+            & li {
+                color: $colorBlack80;
+    
+                display: flex;
+                gap: 8px;
+    
+                position: relative;
+                &::before {
+                    content: '';
+                    flex-shrink: 0;
+                    translate: 0 -3px;
+                    top: unset;
+                    width: 28px;
+                    height: 28px;
+                    background: url(../img/cards/list/Icon-ul.svg) center center / contain no-repeat;
+                }
+            }
+    
+            &_check {
+                & li {
+                    &::before {
+                        background: url(../img/cards/list/Icon-ul-check.svg) center center / contain no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    // .card__num
+    &__num {
+        
+        @include button-text-2;
+        color: $colorWhite;
+        height: 30px;
+        background-color: $colorPrimary500;
+        border-radius: 16px;
+        padding: 4px 12px;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: clamp(12px, 4.4vw, 44px);
+
+        &_aspect_1 {
+            width: 30px;
+        }
+
+        &_sm {
+            @include label-text;
+            margin-bottom: clamp(4px, 2vw, 20px);
+        }
+
+        &_outline {
+            border: 1px solid $colorPrimary500;
+            color: $colorPrimary500;
+            background: none;
+        }
+    }
+
+    // .card__icon
+    &__icon {
+        position: absolute;
+        width: 224px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        display: flex;
+        align-items: flex-end;
+
+        &::after,
+        &::before {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(122.66deg, rgba(245, 246, 249, 0) -15.62%, #F5F6F9 100%);
+        }
+        &::after {
+            opacity: 0;
+            background: linear-gradient(122.66deg, rgba(123, 107, 242, 0) -15.62%, rgba(123, 107, 242, 0.7) 100%);
+        }
+        img {
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            translate: 10% 15%;
+        }
+    }
+
+    // .card__footnote
+    &__footnote {
+        margin-top: auto;
+        @include text-5;
+        color: $colorBlack60;
+    }
+
+    // .card__btns 
+    &__btns {
+        @include flexColumns(2, 12px);
+        opacity: 0;
+        pointer-events: none;
+        margin-top: auto;
+
+        z-index: 5;
+
+        @media screen and (max-width: $breakpoint992) {
+            & > * {
+                flex: 0 0 100%;
+            }
+        }
+        @media screen and (min-width: $breakpoint992) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 0 $padding40;
+            bottom: $padding40;
+        }
+    }
+
+    // .card__footer
+    &__footer {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid $colorBorder;
+        
+        color: $colorBlack60;
+        * {
+            color: inherit;
+            transition: unset;
+        }
+
+        .card__text {
+            @include text-5;
+        }
+
+        @media screen and (max-width: $breakpoint576) {
+            margin-top: 12px;
+        }
+    }
+
+    // .card__date
+    &__date {
+        @include text-1;
+    }
+
+    // .card__link
+    &__link {
+        @include button-text-2;
+        color: $colorPrimary500;
+
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &:not(.card_unhover):hover,
+    &_hovered:not(.card_unhover) {
+        &.card_bg_img {
+            .card__image {
+                &::before {
+                    background: $colorBlack40;
+                }
+            }
+            .card__content {
+                background-image: url(../img/cards/hover-figure-2.png);
+                background-color: $colorPrimary500;
+            }
+            .btn {
+                background: $colorWhite;
+                color: $colorBlack;
+            }
+        }
+        
+        .card__image {
+            img {
+                scale: 1.06;
+            }
+        }
+
+        .card__content {
+            background-color: $colorPrimary500;
+            
+            & > * {
+                color: $colorWhite;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        .card__ul {
+            li {
+                color: $colorWhite;
+                &::before {
+                    filter: brightness(0) invert(1);
+                    -webkit-filter: brightness(0) invert(1);
+                }
+            }
+        }
+
+        .card__icon {
+            img {
+                translate: 10% -5%;
+            }
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        .card__btns {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .card__link {
+            color: $colorWhite;
+
+            svg {
+                path {
+                    fill: $colorWhite;
+                }
+            }
+        }
+    }
+}
+
+.card-nums-reset {
+    counter-reset: card-nums;
+}

@@ -1,0 +1,65 @@
+.btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: $colorPrimary500;
+    color: $colorWhite;
+    border: 1px solid $colorPrimary500;
+    border-radius: 100px;
+    padding: 16px 32px;
+    height: 56px;
+    min-width: min(280px, 100%);
+
+    @include button-text-2;
+
+    &:hover {
+        background-color: $colorPrimary400;
+        border-color: $colorPrimary400;
+    }
+
+    // .btn_s
+    &_s {
+        padding: 16px 24px;
+        min-width: unset;
+        height: 42px;
+
+        @include button-text-1;
+    }
+
+    // .btn_outline
+    &_outline {
+        color: $colorPrimary500;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $colorPrimary500;
+            color: $colorWhite;
+        }
+    }
+    
+    // .btn_dark
+    &_dark {
+        background-color: $colorBlack;
+        border-color: $colorBlack;
+        color: $colorWhite;
+
+        &:hover {
+            background-color: #353949;
+            border-color: #353949;
+        }
+    }
+    // .btn_light
+    &_light {
+        background-color: $colorWhite;
+        border-color: $colorWhite;
+        color: $colorBlack;
+
+        &:hover {
+            background-color: $colorWhite80;
+            border-color: $colorWhite80;
+        }
+    }
+}

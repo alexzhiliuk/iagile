@@ -1,0 +1,223 @@
+@mixin burgerLine {
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+    background: $colorPrimary500;
+    display: block;
+    position: relative;
+}
+
+.header {
+
+    padding: 20px 0;
+    background-color: $colorWhite;
+
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    
+    z-index: $headerLayer;
+    position: sticky;
+    top: 0;
+
+    &_gray {
+        background-color: $colorBgGray;
+    }
+    &_underline {
+        border-bottom: 1px solid $colorBorder;
+    }
+    
+    &_active {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: 100dvh;
+        overflow-y: auto;
+    }
+
+    // .header__container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+        @media screen and (max-width: $burgerBreakpoint) {
+            .header__nav,
+            .header__btn {
+                display: none;
+            }
+        }
+    }
+
+    // .header__logo
+    &__logo {
+        height: 42px;
+
+        img {
+            height: 100%;
+            display: block;
+        }
+    }
+
+    // .header__nav
+    &__nav {
+    }
+
+    // .header__menu
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &:hover {
+                & > a {
+                    color: $colorPrimary500;
+                }
+            }
+        }
+
+        a {
+            @include nav-text-1;
+            color: $colorBlack;
+        }
+    }
+
+    // .header__droplist
+    &__droplist {
+
+        position: relative;
+       
+        ul {
+            position: absolute;
+            top: 100%;
+            left: -24px;
+
+            opacity: 0;
+            pointer-events: none;
+
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            gap: 16px;
+
+            width: max-content;
+
+            background: $colorWhite;
+            border: 1px solid rgba($colorBorder, 0.6);
+            border-radius: 8px;
+
+
+            margin-top: 14px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 14px;
+                top: -14px;
+            }
+
+            a {
+                @include nav-text-2;
+            }
+
+            @media screen and (max-width: $burgerBreakpoint) {
+                opacity: 1;
+                pointer-events: all;
+                // left: 50%;
+                // translate: -50%;
+                position: static;
+            }
+        }
+
+        @media screen and (max-width: $burgerBreakpoint) {
+            svg {
+                display: none;
+            }
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: $colorPrimary500;
+                }
+            }
+            ul {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+    }
+
+    // .header__mobile
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        flex-grow: 1;
+
+        .header__nav {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .header__menu {
+            flex-direction: column;
+        }
+    }
+
+    // .header__burger
+    &__burger {
+        @media screen and (min-width: $burgerBreakpoint) {
+            display: none;
+        }
+
+        height: 42px;
+        width: 42px;
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        span {
+            @include burgerLine;
+            &::before {
+                content: '';
+                @include burgerLine;
+                top: -6px;
+            }
+            &::after {
+                content: '';
+                @include burgerLine;
+                bottom: -4px;
+            }
+        }
+
+        &_active {
+            span {
+                background: transparent;
+                &::before {
+                    rotate: 45deg;
+                    top: 50%;
+                }
+                &::after {
+                    rotate: -45deg;
+                    bottom: 50%;
+                }
+            }    
+        }
+    }
+}

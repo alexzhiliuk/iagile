@@ -1,0 +1,33 @@
+// @import "fonts";
+@import "vars";
+@import "mixins";
+@import "reset";
+@import "typo";
+@import "global";
+
+@import "UI/btn";
+@import "UI/input";
+@import "UI/tag";
+@import "UI/arrows";
+@import "UI/card";
+@import "UI/accordeon";
+@import "UI/review";
+@import "UI/service";
+
+@import "sections/header";
+@import "sections/hero";
+@import "sections/slider";
+@import "sections/cta";
+@import "sections/quote";
+@import "sections/case";
+@import "sections/metrics";
+@import "sections/clients";
+@import "sections/process";
+@import "sections/breadcrumbs";
+@import "sections/banner";
+@import "sections/popup";
+@import "sections/article";
+@import "sections/footer";
+
+
+@import "../libs/swiper/swiper";;

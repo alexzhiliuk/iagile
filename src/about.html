@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "О нас"
+    })
+    <body>
+
+
+        @@include("html/header.html", {"classes": "header_gray header_underline"})
+        @@include("html/popups/form-popup.html")
+        @@include("html/about/breadcrumbs.html")
+
+        <main>            
+            @@include("html/about/hero.html")
+            @@include("html/about/metrics.html")
+            @@include("html/about/process.html")
+            @@include("html/about/cards.html")
+            @@include("html/about/quote.html")
+            @@include("html/about/reviews.html")
+            @@include("html/clients.html")
+            @@include("html/about/cta-form.html")
+        </main>
+
+        @@include("html/footer.html")
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

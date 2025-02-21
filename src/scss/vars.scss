@@ -1,0 +1,54 @@
+// Container
+$conteinerWidth: 1300 + px;
+$containerPadding: 10 + px;
+
+// Breakpoints
+$breakpoint1440: 1439.98 + px;
+$breakpoint1400: 1399.98 + px;
+$breakpoint1366: 1365.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint1024: 1023.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint576: 575.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$colorWhite: #FFFFFF;
+$colorWhite60: rgba($colorWhite, 0.6);
+$colorWhite80: rgba($colorWhite, 0.8);
+$colorWhite90: rgba($colorWhite, 0.9);
+$colorBlack: #282B37;
+$colorBlack15: rgba($colorBlack, 0.15);
+$colorBlack20: rgba($colorBlack, 0.20);
+$colorBlack40: rgba($colorBlack, 0.40);
+$colorBlack60: rgba($colorBlack, 0.60);
+$colorBlack70: rgba($colorBlack, 0.70);
+$colorBlack80: rgba($colorBlack, 0.80);
+$colorGray: #EDEFF4;
+$colorBorder: #E3E5EA;
+$colorBorder1: #D2D8E7;
+$colorPrimary500: #7B6BF2;
+$colorPrimary400: #897BF1;
+$colorPrimary200: #E4E6FA;
+$colorTextGray: #26262D;
+$colorBgWhite: #FFFFFF;
+$colorBgBlack: #26272C;
+$colorBgGray: #F5F6F9;
+
+// Fonts
+$fontPrimary: "Inter";
+
+// Layers
+$headerLayer: 9;
+$popupLayer: 10;
+
+// Burger
+$burgerBreakpoint: $breakpoint1024;
+
+// Transitions
+$quickTransition: all 120ms ease-out;
+
+// Sizes
+$padding100: clamp(40px, 10vw, 100px);
+$padding40: clamp(20px, 4vw, 40px);

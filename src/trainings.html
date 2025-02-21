@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Тренинги"
+    })
+    <body>
+
+
+        @@include("html/header.html", {"classes": "header_gray header_underline"})
+        @@include("html/popups/form-popup.html")
+        @@include("html/trainings/breadcrumbs.html")
+
+        <main>            
+            @@include("html/trainings/hero.html")
+            @@include("html/trainings/scale.html")
+            @@include("html/trainings/quote.html")
+            @@include("html/trainings/cta.html")
+            @@include("html/trainings/help-us.html")
+            @@include("html/trainings/banner.html")
+            @@include("html/trainings/cta-form.html")
+        </main>
+
+        @@include("html/footer.html")
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<section class="popup" data-popup="1" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="@img/popup/close.svg" alt="">
+        </div>
+        <h2 class="popup__title">Оставьте заявку</h2>
+        <p class="popup__subtitle">Наши менеджеры свяжутся с вами ближайшее время</p>
+        <div class="popup__inputs">
+            <input class="input input_gray" type="text" placeholder="Ваше имя" required>
+            <input class="input input_gray" type="tel" placeholder="+7 (999) 999 99 99" data-tel-input required>
+            <input class="input input_gray" type="email" placeholder="E-mail" required>
+            <label class="confirm-checkbox confirm-checkbox_gray">
+                <input type="checkbox">
+                <p>
+                    Я соглашаюсь с <a href="">Политикой конфиденциальности</a>
+                </p>
+            </label>
+        </div>
+        <button type="submit" class="btn popup__btn">Отправить</button>
+    </form>
+</section>
