@@ -1358,6 +1358,7 @@ button {
 @media screen and (max-width: 991.98px) {
   .card__btns > * {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 991.98px) {
@@ -2272,6 +2273,7 @@ button {
   }
   .case__result .card__ul_row li {
     flex: unset;
+    max-width: unset;
   }
 }
 
@@ -2344,6 +2346,7 @@ button {
 @media screen and (max-width: 991.98px) {
   .metrics_column > * {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 .metrics__col:first-of-type {
